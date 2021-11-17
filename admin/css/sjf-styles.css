@@ -1,0 +1,37 @@
+.logo_sidebar {
+  width: 100%;
+}
+
+@media (min-width: 240px) and (max-width: 479px) {
+  .nav_flex {
+    display: flex;
+  }
+
+  .page-title-area {
+    padding: 15px 30px;
+  }
+
+  .page-title-area .pull-left {
+    float: none;
+  }
+
+  .page-title-area .pull-right {
+    padding: 0;
+  }
+
+  .page-title-area .user-profile.pull-right {
+    background: none;
+  }
+
+  .page-title-area img.avatar {
+    margin-right: 0;
+  }
+
+  .user-name.dropdown-toggle span {
+    display: none;
+  }
+
+  .page-title-area .user-name {
+    color: black;
+  }
+}
