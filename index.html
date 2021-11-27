@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +22,7 @@
       }
     </style>
 </head>
+
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg " style="background:#FDF9D5">
@@ -40,10 +42,7 @@
         </div>
     </nav>
     <!-- header -->
-    <!-- selogan -->
-    <!-- style="background-image: url('images/slogan/vektor.png');height: 40vw; background-size: cover;display: flex;" -->
     <div class="slogan" >
-      
         <div class="container mt-lg-5 mt-md-4 mt-sm-3">
           <div class="row d-flex">
             <div class="col-lg-4 col-md-12 g-5" style="margin-top: 10vw; float: right;"> 
@@ -59,28 +58,40 @@
           </div>
         </div>
     </div>
-    
 
-
-    <!-- menampilkan sample barang -->
-    
-
-    <footer>
-        <div class="isi" style="border-bottom:#FDF9D5 0.1vw solid;">
-            <div class="container justify-content-end " >
-                <div class="main" style="margin-top: 9vw;">
-                    <p style="font-size: 2vw; font-weight: 700;  padding-top: 3vw;">Social Media</p>
-                </div>
-                <div class="akun" style="margin-bottom: 2vw;">
-                    <img src="images/facebook.png" style="width: 15px;background-size: cover;" alt=""><a class="facebook" href="">Tokos</a><br>
-                    <img src="images/mail.png" style="width: 15px;background-size: cover;" alt=""><a class="mail" href="">tokos@gmail.com</a><br>
-                    <img src="images/twitter.png" style="width: 15px;background-size: cover;" alt=""><a class="facebook" href="">toko_anak_kos</a>
-                </div>
-            </div>
+  <footer>
+    <div class="isi" style="border-bottom:#FDF9D5 0.1vw solid;">
+      <div class="container justify-content-end ">
+        <div class="main" style="margin-top: 9vw;">
+          <p style="font-size: 2vw; font-weight: 700;  padding-top: 3vw;">Social Media</p>
         </div>
-        <div class="container" style="width: 90%;">
-            <p style="padding: 2vh 0;font-size: 1vw;"> Tokos Copyright ©  2021 Toko Anak Kos Tembalang.</p>
+        <div class="akun" style="margin-bottom: 2vw;">
+          <img src="images/facebook.png" style="width: 15px;background-size: cover;" alt=""><a class="facebook"
+            href="">Tokos</a><br>
+          <img src="images/mail.png" style="width: 15px;background-size: cover;" alt=""><a class="mail"
+            href="">tokos@gmail.com</a><br>
+          <img src="images/twitter.png" style="width: 15px;background-size: cover;" alt=""><a class="facebook"
+            href="">toko_anak_kos</a>
         </div>
-    </footer>
+      </div>
+    </div>
+    <div class="container" style="width: 90%;">
+      <p style="padding: 2vh 0;font-size: 1vw;"> Tokos Copyright © 2021 Toko Anak Kos Tembalang.</p>
+    </div>
+  </footer>
 </body>
+<script>
+  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
+
 </html>
