@@ -43,6 +43,10 @@ footer {
   text-decoration: none;
   margin-left: 1vw;
 }
+.akun a:hover {
+  font-weight: bolder;
+  color: #466545;
+}
 
 /* index */
 
