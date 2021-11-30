@@ -33,6 +33,10 @@
                 <label for="nama">Nama</label><br>
                 <input class="input-nama w-100" type="text" id="nama">
             </div>
+            <div class="nohp">
+                <label for="nohp">No.Hp</label><br>
+                <input class="input-nama w-100" type="number" id="nohp">
+            </div>
             <div class="alamat">
                 <label for="alamat">Alamat</label><br>
                 <textarea class="input-alamat w-100" name="alamat" id="alamat" cols="30" rows="10"></textarea>
@@ -41,15 +45,28 @@
                 <label for="jumlahbarang">Jumlahbarang</label><br>
                 <input class="input-jumlahbarang w-100" type="number" id="nama">
             </div>
-            <div class="buktipembayaran">
-                <label for="buktipembayaran">Bukti Pembayaran</label><br>
-                <input type="image" style="width: 20rem;">
+            <div class="buktipembayaran mt-3">
+                <div class="form-group ">
+                    <label for="buktipembayaran">Bukti Pembayaran</label><br>
+                    <img id="image-preview-update" width="100" height="100" src="http://placehold.it/100x100" alt="image preview" width="200px"/>
+                    <br>
+                    <input class="" type="file" style="display:none" value="Pilih Gambar / File" id="image-source-update"  onchange="previewImageUpdate().value=this.value"/>  
+                    <input type="button" class="btn btn-secondary mt-2" value="Pilih Foto Lain" onclick="document.getElementById('image-source-update').click()">    
+                </div>
             </div>
             <button class="btn bg-success fw-bold" type="submit" style="float: right;color: white;">Submit</button>
         </form>
-    </div>
+    </div>   
+    <script>
+        function previewImageUpdate() {
+        document.getElementById("image-preview-update").style.display = "block";
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("image-source-update").files[0]);
     
-    
-    
+        oFReader.onload = function(oFREvent) {
+            document.getElementById("image-preview-update").src = oFREvent.target.result;
+            };
+        };
+    </script>
 </body>
 </html>
